@@ -1,31 +1,81 @@
-algo
+algo prob 2
 var 
-ch:string,
-long:integer:=0,
-klm:integer:=0,
-hrf:integer:=0,
-i:integer;
+tab: array of integer[5];
+vct: array of 5 integer[5];
+i,s: integer;
+
 begin
 
-write('donner une chaine');
-read(char);
-
-for i from 1 to char.length step step do 
-
-long:=long+1;
-
-
-if(ch(i)=" "&ch(i)=".")
-klm:=klm+1;
+for i from 1 to 5 step 1 do 
+write (' give ',i,'element of table 1 ');
+read (tab[i]);
+end_for
+for i form 1 to 5 step 1 do 
+write (' give ',i,'element of table 2 ');
+read (vct[i]);
+end_for
+s=0;
+for i form 1 to 5 step 1 do 
+if (tab[i]=vect[i] ) then ;
+s := tab[i]+s;
 end if
+end_for
+write (Sum of overlapping elements: ,s*2)
+end
 
-if(ch(i)>="a" && ch(i)<="z" && ch(i)>="A" && ch(i)<="Z")
-hrf:=hrf+1;
-end if;
 
+algo prob 1 
+algo sol 1 
+var 
+tab: array of integer[5];
+vct: array of 5 integer[5];
+i,s: integer;
+begin
 
-end for;
-Write(long);
-Write(klm);
-Write(hrf);
-end.
+for i from 1 to 5 step 1 do 
+write (' give ',i,'element of table 1 ');
+read (tab[i]);
+end_for
+for i form 1 to 5 step 1 do 
+write (' give ',i,'element of table 2 ');
+read (vct[i]);
+end_for
+s=0;
+for i form 1 to 5 step 1 do 
+if (tab[i]=vect[i] ) then ;
+s := tab[i]+s;
+end if
+end_for
+write (Sum of overlapping elements: ,s);
+end
+
+algo prob 1 
+algo sol 2
+
+VAR
+   vct: HASH_TABLE< integer, integer>; 
+   tab: HASH_TABLE< integer, integer>;
+	i:integer
+	a:integer
+BEGIN
+   tab: HASH_TABLE< integer,integer>;
+for i form 1 to 5 step 1 do 
+write (' give ',i,'element of table 1 ');
+read(a);
+   htab.insert(1,a);
+end_for
+   vct: HASH_TABLE< integer,integer>;
+for i form 1 to 5 step 1 do 
+write (' give ',i,'element of table 2 ');
+read(a);
+   htab.insert(1,a);
+end_for
+s=0;
+for i form 1 to 5 step 1 do 
+if (tab.get(i)=vect.get(i) ) then 
+s := tab.get(i)+s;
+end if
+end_for
+write (Sum of overlapping elements: ,s);
+end
+
